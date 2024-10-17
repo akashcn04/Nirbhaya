@@ -8,7 +8,7 @@ function Working() {
   const [alertMessage, setAlertMessage] = useState(""); // To store alert message
   const [showAlert, setShowAlert] = useState(false); // To manage visibility of alert
   const fileInputRef = useRef(null);            // Ref for file input
-
+  
   // Function to handle file upload
   const handleFileUpload = (event) => {
     const file = event.target.files[0]; // Get the selected file
@@ -42,7 +42,7 @@ function Working() {
   const handleDetectAnomaly = () => {
     if (detectReady) {
       const currentTime = new Date().toLocaleString(); // Get current time
-      const location = "Current Location (simulated)"; // Simulate location
+      const location = "This Location"; // Simulate location
 
       // Set alert message to be displayed on the screen
       setAlertMessage(`Alert! Anomaly detected at ${location} on ${currentTime}`);
@@ -60,6 +60,7 @@ function Working() {
     setShowAlert(false); // Hide the alert
     setAlertMessage(""); // Clear alert message
   };
+
 
   return (
     <>
